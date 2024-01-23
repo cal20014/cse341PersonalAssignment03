@@ -1,0 +1,51 @@
+[
+  {
+    "firstName": "Elijah",
+    "lastName": "Harrison",
+    "email": "elijah.h@test.com",
+    "favoriteColor": "Blue",
+    "birthday": "09/18/87"
+  },
+  {
+    "firstName": "Olivia",
+    "lastName": "Parker",
+    "email": "olivia.p@test.com",
+    "favoriteColor": "Red",
+    "birthday": "05/07/94"
+  },
+  {
+    "firstName": "Miriam",
+    "lastName": "Call",
+    "email": "call.m@test.com",
+    "favoriteColor": "Pink",
+    "birthday": "01/01/90"
+  },
+  {
+    "firstName": "Elias",
+    "lastName": "Call",
+    "email": "call.eli@test.com",
+    "favoriteColor": "Green",
+    "birthday": "02/02/92"
+  },
+  {
+    "firstName": "Evelyn",
+    "lastName": "Call",
+    "email": "call.eve@test.com",
+    "favoriteColor": "Pink",
+    "birthday": "03/03/93"
+  },
+  {
+    "firstName": "John",
+    "lastName": "Smith",
+    "email": "smith.j@test.com",
+    "favoriteColor": "Orange",
+    "birthday": "04/04/94"
+  },
+  {
+    "firstName": "Grant",
+    "lastName": "Call",
+    "email": "call.g@test.com",
+    "favoriteColor": "Green",
+    "birthday": "05/05/95"
+  }
+]

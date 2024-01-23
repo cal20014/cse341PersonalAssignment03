@@ -1,0 +1,84 @@
+[{
+  "_id": {
+    "$oid": "65b024c7100c1a9fa3ae5a26"
+  },
+  "contact": {
+    "firstName": "Elijah",
+    "lastName": "Harrison",
+    "email": "elijah.h@test.com",
+    "favoriteColor": "Blue",
+    "birthday": "09/18/87"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b024ef100c1a9fa3ae5a28"
+  },
+  "contact": {
+    "firstName": "Elijah",
+    "lastName": "Harrison",
+    "email": "elijah.h@test.com",
+    "favoriteColor": "Blue",
+    "birthday": "09/18/87"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b0250f100c1a9fa3ae5a2a"
+  },
+  "contact3": {
+    "firstName": "Jackson",
+    "lastName": "Roberts",
+    "email": "jackson.r@test.com",
+    "favoriteColor": "Red",
+    "birthday": "11/15/82"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b02526100c1a9fa3ae5a2c"
+  },
+  "contact4": {
+    "firstName": "Sophie",
+    "lastName": "Williams",
+    "email": "sophie.w@test.com",
+    "favoriteColor": "Orange",
+    "birthday": "03/25/89"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b02533100c1a9fa3ae5a2e"
+  },
+  "contact5": {
+    "firstName": "Liam",
+    "lastName": "Anderson",
+    "email": "liam.a@test.com",
+    "favoriteColor": "Green",
+    "birthday": "08/12/73"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b0253f100c1a9fa3ae5a30"
+  },
+  "contact6": {
+    "firstName": "Emma",
+    "lastName": "Taylor",
+    "email": "emma.t@test.com",
+    "favoriteColor": "Purple",
+    "birthday": "06/09/91"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b02551100c1a9fa3ae5a32"
+  },
+  "contact7": {
+    "firstName": "Mason",
+    "lastName": "Carter",
+    "email": "mason.c@test.com",
+    "favoriteColor": "Yellow",
+    "birthday": "04/30/88"
+  }
+}]
