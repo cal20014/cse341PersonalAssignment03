@@ -20,6 +20,14 @@ connectToDatabase()
 
 app.use("/", require("./routes"));
 
-app.listen(port, host, () => {
-  console.log(`Server running at http://${host}:${port}/`);
-});
+if (process.env.NODE_ENV === "development") {
+  app.listen(port, host, () => {
+    console.log(`Server running at http://${host}:${port}/`);
+  });
+} else if (process.env.NODE_ENV === "production") {
+  app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+  });
+} else {
+  console.error("NODE_ENV not set");
+}
