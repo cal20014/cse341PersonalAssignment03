@@ -27,3 +27,30 @@ GET http://localhost:8080/contacts/color/red
 
 ### Get contacts by birthday month
 GET http://localhost:8080/contacts/b-month/02
+
+
+
+### Add a new contact
+POST http://localhost:8080/
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "favoriteColor": "Blue",
+  "birthday": "1990-01-01"
+}
+
+### Update a contact
+PUT http://localhost:8080/:id
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "favoriteColor": "Green",
+  "birthday": "1990-01-01"
+}
+
+### Delete a contact
+DELETE http://localhost:8080/:id
