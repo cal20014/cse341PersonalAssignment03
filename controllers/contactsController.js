@@ -105,18 +105,22 @@ contactsController.updateContact = async (req, res, next) => {
 };
 
 // DELETE
+// DELETE
 contactsController.deleteContact = async (req, res, next) => {
   try {
     const contactId = new ObjectId(req.params.id);
     const db = await connectToDatabase("cse341");
     const contacts = db.collection("contacts");
-    const results = await contacts.deleteOne({ _id: contactId });
-    if (results.deletedCount > 0) {
+    const response = await contacts.remove({ _id: contactId }, true);
+    console.log(response);
+    if (response.deletedCount > 0) {
       res.status(204).send();
     } else {
       res
         .status(500)
-        .json({ message: "An error occurred while deleting the contact." });
+        .json(
+          response.error || "Some error occurred while deleting the contact."
+        );
     }
   } catch (error) {
     console.log("Error deleting contact:", error);
