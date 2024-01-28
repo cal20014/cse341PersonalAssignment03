@@ -1,0 +1,100 @@
+
+### Get Home Route
+GET http://localhost:8080/
+
+### Get Professional Route
+GET http://localhost:8080/professional
+
+### Get all contacts
+GET http://localhost:8080/contacts
+
+### Get a contact by ID
+GET http://localhost:8080/contacts/65b029df100c1a9fa3ae5a3c
+
+### Get contacts by favorite color green
+GET http://localhost:8080/contacts/color/green
+
+### Get contacts by favorite color blue
+GET http://localhost:8080/contacts/color/Blue
+
+### Get contacts by favorite color pink
+GET http://localhost:8080/contacts/color/pink
+
+### Get contacts by favorite color red
+GET http://localhost:8080/contacts/color/red
+
+### Get contacts by birthday month
+GET http://localhost:8080/contacts/b-month/02
+
+### Add a new contact
+POST http://localhost:8080/
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "favoriteColor": "Blue",
+  "birthday": "1990-01-01"
+}
+
+### Update a contact
+PUT http://localhost:8080/:id
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "favoriteColor": "Green",
+  "birthday": "1990-01-01"
+}
+
+### Delete a contact
+DELETE http://localhost:8080/:id
+
+// PRODUCTION ROUTES:
+
+### Get Home Route
+GET https://cse341-03-web-service.onrender.com/
+
+### Get Professional Route
+GET https://cse341-03-web-service.onrender.com/professional
+
+### Get all contacts
+GET https://cse341-03-web-service.onrender.com/
+
+### Get a contact by ID
+GET https://cse341-03-web-service.onrender.com/:id
+
+### Get contacts by first name
+GET https://cse341-03-web-service.onrender.com/f-name/:firstName
+
+### Get contacts by favorite color
+GET https://cse341-03-web-service.onrender.com/color/:favoriteColor
+
+### Get contacts by birthday month
+GET https://cse341-03-web-service.onrender.com/b-month/:month
+
+### Add a new contact
+POST https://cse341-03-web-service.onrender.com/
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "favoriteColor": "Blue",
+  "birthday": "1990-01-01"
+}
+
+### Update a contact
+PUT https://cse341-03-web-service.onrender.com/:id
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "favoriteColor": "Green",
+  "birthday": "1990-01-01"
+}
+
+### Delete a contact
+DELETE https://cse341-03-web-service.onrender.com/:id
