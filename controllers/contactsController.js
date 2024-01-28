@@ -69,7 +69,12 @@ contactsController.addContact = async (req, res, next) => {
     const contacts = db.collection("contacts");
     const result = await contacts.insertOne(newContact);
     if (result.insertedId) {
-      res.status(201).json({ message: "Contact added", id: result.insertedId });
+      res
+        .status(201)
+        .json({
+          message: "Contact successfully added. Contact id: ",
+          id: result.insertedId,
+        });
     } else {
       res.status(500).json({ message: "Error adding contact" });
     }
