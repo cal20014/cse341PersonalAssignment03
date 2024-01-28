@@ -105,7 +105,6 @@ contactsController.updateContact = async (req, res, next) => {
 };
 
 // DELETE
-// DELETE
 contactsController.deleteContact = async (req, res, next) => {
   try {
     const contactId = new ObjectId(req.params.id);
@@ -119,12 +118,13 @@ contactsController.deleteContact = async (req, res, next) => {
       res
         .status(500)
         .json(
-          response.error || "Some error occurred while deleting the contact."
+          response.error ||
+            "ERROR! An error occurred while deleting the contact."
         );
     }
   } catch (error) {
     console.log("Error deleting contact:", error);
-    res.status(500).send("Error connecting to database: " + error);
+    res.status(500).send("Error connecting to database: ");
   }
 };
 
