@@ -39,7 +39,7 @@ contactsController.getContactsByFirstName = (req, res, next) => {
 contactsController.getContactsByFavoriteColor = (req, res, next) => {
   getContacts(
     { favoriteColor: { $regex: new RegExp(req.params.favoriteColor, "i") } },
-    res
+    res,
   );
 };
 
@@ -55,6 +55,7 @@ contactsController.addContact = async (req, res, next) => {
     const newContact = {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
+      email: req.body.email,
       favoriteColor: req.body.favoriteColor,
       birthday: req.body.birthday,
     };
@@ -79,6 +80,7 @@ contactsController.updateContact = async (req, res, next) => {
     const UpdatedContact = {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
+      email: req.body.email,
       favoriteColor: req.body.favoriteColor,
       birthday: req.body.birthday,
     };
@@ -86,7 +88,7 @@ contactsController.updateContact = async (req, res, next) => {
     const contacts = db.collection("contacts");
     const results = await contacts.updateOne(
       { _id: contactId },
-      { $set: UpdatedContact }
+      { $set: UpdatedContact },
     );
     if (results.modifiedCount > 0) {
       res.status(204).send();
