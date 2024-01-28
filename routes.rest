@@ -80,11 +80,20 @@ POST https://cse341-03-web-service.onrender.com/contacts
 Content-Type: application/json
 
 {
-  "firstName": "Jason",
-  "lastName": "Bourne",
-  "favoriteColor": "Blue",
-  "birthday": "1990-01-01"
+"_id": "65b5ac4883d95c86f58851a2",
+"firstName": "Del",
+"lastName": "Me",
+"email": "@test.com",
+"favoriteColor": "Brown",
+"birthday": "01/18/2005"
 }
+
+# {
+#   "firstName": "Jason",
+#   "lastName": "Bourne",
+#   "favoriteColor": "Blue",
+#   "birthday": "1990-01-01"
+# }
 
 ### Update a contact
 PUT https://cse341-03-web-service.onrender.com/contacts/65b5ac1883d95c86f58851a0
