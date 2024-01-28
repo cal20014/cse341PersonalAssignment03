@@ -5,7 +5,7 @@ const connectToDatabase = require("../db/connect.js");
 const contactsController = {};
 
 // GET
-const getContacts = async (filter, res) => {
+const getContacts = async (filter, res, prettyPrint) => {
   try {
     const db = await connectToDatabase("cse341");
     const contacts = db.collection("contacts");
@@ -13,7 +13,11 @@ const getContacts = async (filter, res) => {
     const result = await contacts.find(filter);
     result.toArray().then((lists) => {
       res.setHeader("Content-Type", "application/json");
-      res.status(200).json(lists);
+      if (prettyPrint) {
+        res.status(200).send(JSON.stringify(lists, null, 2));
+      } else {
+        res.status(200).json(lists);
+      }
     });
   } catch (error) {
     console.log(error);
@@ -22,7 +26,8 @@ const getContacts = async (filter, res) => {
 };
 
 contactsController.getAllContacts = (req, res, next) => {
-  getContacts({}, res);
+  const prettyPrint = req.query.prettyPrint === "true";
+  getContacts({}, res, prettyPrint);
 };
 
 contactsController.getSingleContactById = (req, res, next) => {

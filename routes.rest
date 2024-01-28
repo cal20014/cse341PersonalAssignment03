@@ -8,6 +8,9 @@ GET http://localhost:8080/professional
 ### Get all contacts
 GET http://localhost:8080/contacts
 
+### Get all contacts (prettyPrint)
+GET http://localhost:8080/contacts?prettyPrint=true
+
 ### Get a single contact by ID
 GET http://localhost:8080/contacts/65b029df100c1a9fa3ae5a3c
 
@@ -63,6 +66,11 @@ GET https://cse341-03-web-service.onrender.com/professional
 ### Get all contacts
 GET https://cse341-03-web-service.onrender.com/contacts
 
+### Get all contacts (prettyPrint)
+GET https://cse341-03-web-service.onrender.com/contacts?prettyPrint=true
+
+
+
 ### Get a contact by ID
 GET https://cse341-03-web-service.onrender.com/contacts/65b5ac1883d95c86f58851a0
 
@@ -80,10 +88,10 @@ POST https://cse341-03-web-service.onrender.com/contacts
 Content-Type: application/json
 
 {
-  "firstName": "Jason",
-  "lastName": "Bourne",
-  "favoriteColor": "Blue",
-  "birthday": "1990-01-01"
+  "firstName": "Freddy",
+  "lastName": "Alger",
+  "favoriteColor": "Red",
+  "birthday": "1997-08-02"
 }
 
 ### Update a contact
