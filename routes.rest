@@ -69,8 +69,6 @@ GET https://cse341-03-web-service.onrender.com/contacts
 ### Get all contacts (prettyPrint)
 GET https://cse341-03-web-service.onrender.com/contacts?prettyPrint=true
 
-
-
 ### Get a contact by ID
 GET https://cse341-03-web-service.onrender.com/contacts/65b5ac1883d95c86f58851a0
 
@@ -90,6 +88,7 @@ Content-Type: application/json
 {
   "firstName": "Freddy",
   "lastName": "Alger",
+  "email": "alger.freddy@email.com",
   "favoriteColor": "Red",
   "birthday": "1997-08-02"
 }
@@ -101,13 +100,13 @@ Content-Type: application/json
 {
   "firstName": "John",
   "lastName": "Doe",
-  "email": "jd@gmail.com",
+  "email": "john.doe@email.com",
   "favoriteColor": "yellow",
   "birthday": "1990-01-01"
 }
 
 ### Delete a contact
-DELETE https://cse341-03-web-service.onrender.com/contacts/65b5ac4883d95c86f58851a2
+DELETE https://cse341-03-web-service.onrender.com/contacts/65b5e9e87f518f6332db07f5
 
 
 

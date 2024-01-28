@@ -115,7 +115,7 @@ contactsController.deleteContact = async (req, res, next) => {
     const contactId = new ObjectId(req.params.id);
     const db = await connectToDatabase("cse341");
     const contacts = db.collection("contacts");
-    const response = await contacts.remove({ _id: contactId }, true);
+    const response = await contacts.deleteOne({ _id: contactId });
     console.log(response);
     if (response.deletedCount > 0) {
       res.status(204).send();
@@ -128,8 +128,8 @@ contactsController.deleteContact = async (req, res, next) => {
         );
     }
   } catch (error) {
-    console.log("Error deleting contact:", error);
-    res.status(500).send("Error connecting to database: ");
+    console.log(error);
+    res.status(500).send("Error connecting to database");
   }
 };
 
