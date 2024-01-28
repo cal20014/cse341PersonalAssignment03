@@ -1,4 +1,5 @@
 const ObjectId = require("mongodb").ObjectId;
+const e = require("express");
 const connectToDatabase = require("../db/connect.js");
 
 const contactsController = {};
@@ -39,7 +40,7 @@ contactsController.getContactsByFirstName = (req, res, next) => {
 contactsController.getContactsByFavoriteColor = (req, res, next) => {
   getContacts(
     { favoriteColor: { $regex: new RegExp(req.params.favoriteColor, "i") } },
-    res,
+    res
   );
 };
 
@@ -88,7 +89,7 @@ contactsController.updateContact = async (req, res, next) => {
     const contacts = db.collection("contacts");
     const results = await contacts.updateOne(
       { _id: contactId },
-      { $set: UpdatedContact },
+      { $set: UpdatedContact }
     );
     if (results.modifiedCount > 0) {
       res.status(204).send();
@@ -110,7 +111,7 @@ contactsController.deleteContact = async (req, res, next) => {
     const db = await connectToDatabase("cse341");
     const contacts = db.collection("contacts");
     const results = await contacts.deleteOne({ _id: contactId });
-    if (results.deleteContact > 0) {
+    if (results.deletedCount > 0) {
       res.status(204).send();
     } else {
       res
@@ -118,8 +119,8 @@ contactsController.deleteContact = async (req, res, next) => {
         .json({ message: "An error occurred while deleting the contact." });
     }
   } catch (error) {
-    console.log(error);
-    res.status(500).send("Error connecting to database");
+    console.log("Error deleting contact:", error);
+    res.status(500).send("Error connecting to database: " + error);
   }
 };
 

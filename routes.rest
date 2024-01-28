@@ -100,3 +100,14 @@ Content-Type: application/json
 
 ### Delete a contact
 DELETE https://cse341-03-web-service.onrender.com/contacts/65b5ac4883d95c86f58851a2
+
+
+
+# {
+# "_id": "65b5ac4883d95c86f58851a2",
+# "firstName": "Del",
+# "lastName": "Me",
+# "email": "@test.com",
+# "favoriteColor": "Brown",
+# "birthday": "01/18/2005"
+# },
