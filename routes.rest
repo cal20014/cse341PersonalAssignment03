@@ -106,7 +106,7 @@ Content-Type: application/json
 }
 
 ### Delete a contact
-DELETE https://cse341-03-web-service.onrender.com/contacts/65b5e9e87f518f6332db07f5
+DELETE https://cse341-03-web-service.onrender.com/contacts/65b5ef7204f4cdd8b69fcac9
 
 
 

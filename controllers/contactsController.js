@@ -97,7 +97,7 @@ contactsController.updateContact = async (req, res, next) => {
       { $set: UpdatedContact }
     );
     if (results.modifiedCount > 0) {
-      res.status(204).send();
+      res.status(200).send({ message: "Contact updated successfully" });
     } else {
       res
         .status(500)
@@ -118,7 +118,7 @@ contactsController.deleteContact = async (req, res, next) => {
     const response = await contacts.deleteOne({ _id: contactId });
     console.log(response);
     if (response.deletedCount > 0) {
-      res.status(204).send();
+      res.status(200).send({ message: "Contact deleted successfully" });
     } else {
       res
         .status(500)
