@@ -1,5 +1,4 @@
 const ObjectId = require("mongodb").ObjectId;
-const express = require("express");
 const connectToDatabase = require("../db/connect.js");
 
 const contactsController = {};
@@ -30,7 +29,7 @@ contactsController.getSingleContactById = (req, res, next) => {
   if (!ObjectId.isValid(contactId)) {
     return res.status(400).send("Invalid ID format");
   }
-  getContacts({ _id: new ObjectId(contactId) }, res);
+  getContacts({ _id: contactId }, res); // use contactId directly
 };
 
 contactsController.getContactsByFirstName = (req, res, next) => {
@@ -86,7 +85,7 @@ contactsController.updateContact = async (req, res, next) => {
     const db = await connectToDatabase("cse341");
     const contacts = db.collection("contacts");
     const results = await contacts.updateOne(
-      { _id: new ObjectId(contactId) },
+      { _id: contactId },
       { $set: UpdatedContact }
     );
     if (results.modifiedCount > 0) {
@@ -108,7 +107,7 @@ contactsController.deleteContact = async (req, res, next) => {
     const contactId = new ObjectId(req.params.id);
     const db = await connectToDatabase("cse341");
     const contacts = db.collection("contacts");
-    const results = await contacts.deleteOne({ _id: new ObjectId(contactId) });
+    const results = await contacts.deleteOne({ _id: contactId });
     if (results.deleteContact > 0) {
       res.status(204).send();
     } else {
