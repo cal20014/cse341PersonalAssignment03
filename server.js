@@ -1,6 +1,7 @@
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger-output.json");
 const express = require("express");
+const cors = require("cors");
 
 const app = express();
 const connectToDatabase = require("./db/connect.js");
@@ -11,6 +12,7 @@ const host = process.env.HOST || "localhost";
 const dotenv = require("dotenv");
 dotenv.config();
 
+app.use(cors());
 app.use(express.json()); // Used to parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // Used to parse URL-encoded bodies
 
