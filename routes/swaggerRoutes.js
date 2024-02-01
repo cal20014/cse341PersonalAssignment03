@@ -4,7 +4,7 @@ const swaggerDocument = require("../swagger-output.json");
 
 // Routes
 
-//  Swagger UI route for API documentation
+//  Swagger UI route
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 module.exports = router;
