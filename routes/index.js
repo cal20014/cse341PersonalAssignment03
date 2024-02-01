@@ -5,8 +5,8 @@ const contactsRoute = require("./contactsRoute.js");
 const swagger = require("./swaggerRoutes.js");
 
 // Routes
-router.use("/", swagger);
-router.use("/home", homeRoutes);
+router.use("/api-docs", swagger);
+router.use("/", homeRoutes);
 router.use("/professional", professionalRoutes);
 router.use("/contacts", contactsRoute);
 
