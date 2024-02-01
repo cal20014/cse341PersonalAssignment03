@@ -2,16 +2,16 @@
   "swagger": "2.0",
   "info": {
     "title": "CSE341 Docs",
-    "description": "Description",
+    "description": "API documentation for CSE341",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "https://cse341-03-web-service.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
-    "/": {
+    "/home/": {
       "get": {
         "description": "",
         "responses": {

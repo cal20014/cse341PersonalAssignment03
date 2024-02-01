@@ -24,7 +24,6 @@ connectToDatabase()
   });
 
 app.use("/", require("./routes"));
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 if (process.env.NODE_ENV === "development") {
   app.listen(port, host, () => {
