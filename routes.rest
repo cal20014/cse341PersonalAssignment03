@@ -101,12 +101,12 @@ Content-Type: application/json
   "firstName": "John",
   "lastName": "Doe",
   "email": "john.doe@email.com",
-  "favoriteColor": "yellow",
+  "favoriteColor": "Brown",
   "birthday": "1990-01-01"
 }
 
 ### Delete a contact
-DELETE https://cse341-03-web-service.onrender.com/contacts/65b5ef7204f4cdd8b69fcac9
+DELETE https://cse341-03-web-service.onrender.com/contacts/65b5f2073aea86d31a2efae4
 
 
 
